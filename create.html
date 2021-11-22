@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Note</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+    <div>
+        <a href="index.html"><h1 class="title"><span>BT Notepad</span></h1></a>
+        <form method="post" action="connect.php" class="box">
+            <br><br><br><br>
+            <div class="subtitle">Title</div>
+            <label>
+                <span><input type="text" name="title"></span>
+            </label><br>
+            <div class="subtitle">Notes</div>
+            <label>
+                <textarea type="text" placeholder="Write your thoughts..." name="notes"></textarea>
+            </label>
+            <input type="submit" value="Store Note">
+        </form>
+        <button onclick= "goBack()" class="back">Go Back</button>
+        <script>
+            function goBack(){
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

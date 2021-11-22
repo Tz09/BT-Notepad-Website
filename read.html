@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read Note</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+
+<!--Reference: Fetch data from database and display-->
+<!--1)	PHP returning values-->
+<!--    https://www.tutorialspoint.com/php-returning-values-->
+<!--2)	YouTube channel: GeekyVivek-->
+<!--    How to fetch data from MySql Database using PHP-->
+<!--    https://www.youtube.com/watch?v=zYwOOQmfBzA&t=606s-->
+
+<?php include ("retrieve.php");?>
+<body>
+    <a href="index.html"><h1 class="title"><span>BT Notepad</span></h1></a>
+    <br><br><br><br><br><br>
+    <div class="readbg">
+        <?php
+        while($rows = mysqli_fetch_assoc($result))
+        {
+        ?>
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-text">
+                <h2><?php echo $rows['title']; ?></h2>
+                <p><?php echo $rows['notes']; ?></p>
+            </div>
+        </div>
+        <?php
+        }
+        ?>
+        <button onclick= "goBack()" class="back">Go Back</button>
+        <script>
+            function goBack(){
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

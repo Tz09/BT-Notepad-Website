@@ -1,0 +1,221 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('bg.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.title{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Roboto Thin", serif;
+    left: 3%;
+    font-size: 37px;
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    border-radius: 35px;
+    background-image: linear-gradient(rgb(114, 196, 255), rgb(65, 164, 231));
+}
+
+.title span {
+    display: block;
+    padding: 15px 25px;
+}
+
+.title:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.subtitle {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 37px;
+    text-align: center;
+    font-family:Verdana,Serif,serif;
+}
+
+form{
+    text-align: center;
+    font-size: 20px;
+}
+textarea{
+    font-size: 30px;
+}
+
+button {
+    background-color: rgba(224, 224, 224, 0.15);
+    backdrop-filter: blur(20px);
+    font-family: "Roboto Thin", serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    left: 38%;
+    font-size: 34px;
+    margin: 0;
+    width: 300px;
+    height: 110px;
+    border: 2px solid #555555;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: .6s;        //small to big font
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #fffbf9;
+    cursor: pointer;
+}
+
+button:focus {
+    outline-style: none;
+}
+
+.back {
+    font-size: 30px;
+    left: 82%;
+    top: 5%;
+    width: 200px;
+    height: 70px;
+}
+
+.box input[type = "text"] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 450px;
+    font-size: 20px;
+    border: 0;
+    background-color: #d7faf0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type = "text"]:hover {
+    width: 600px;
+    transition: 0.75s;
+}
+.box input[type = "text"]:focus {
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 600px;
+    background-color: #bcdbfd;
+    transition: 0.75s;
+}
+
+.box textarea{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 800px;
+    height: 230px;
+    font-size: 20px;
+    border: 0;
+    background-color: #d7faf0;
+    display: block;
+    margin: 20px auto;
+    text-align: left;
+    padding: 14px 10px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box textarea:hover {
+    width: 1000px;
+    transition: 1s;
+}
+.box textarea:focus {
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 1000px;
+    background-color: #bcdbfd;
+    transition: 0.75s;
+}
+
+.box input[type = "submit"] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 200px;
+    height: 60px;
+    font-size: 28px;
+    font-family: "Roboto Thin", serif;
+    border: 0;
+    background-color: antiquewhite;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type = "submit"]:hover {
+    transform: scale(1.15);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.readbg {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 650px 650px;
+}
+
+/*  Reference: Display of notes*/
+/*  RPG Styles Card with Hover Effect - HTML/CSS*/
+/*  https://www.youtube.com/watch?v=cwC1qdPWBKo*/
+.card {
+    display: grid;
+    grid-template-columns: 611px;
+    grid-template-rows: 50px 200px;
+    grid-template-areas: "image" "text";
+
+    border-radius: 25px;
+    background: white;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.9);
+    font-family: roboto, serif;
+    text-align: center;
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:20px;
+}
+.card-image {
+    grid-area: image;
+    background: url("cardBg.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text {
+    grid-area: text;
+    overflow: auto;
+}
+.card:hover {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    transition: 2s;
+}
+
+.copyright {
+    font-family: "Roboto Thin", serif;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 22px;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -25%);
+    margin: 0 auto;
+}
